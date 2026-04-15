@@ -242,10 +242,10 @@ React Native의 컴포넌트는 실제 네이티브 UI 컴포넌트로 렌더링
 ```mermaid
 graph LR
     subgraph "React Native"
-        A[&#60;View&#62;]
-        B[&#60;Text&#62;]
-        C[&#60;Image&#62;]
-        D[&#60;ScrollView&#62;]
+        A[#60;View#62;]
+        B[#60;Text#62;]
+        C[#60;Image#62;]
+        D[#60;ScrollView#62;]
     end
     
     subgraph "iOS"
