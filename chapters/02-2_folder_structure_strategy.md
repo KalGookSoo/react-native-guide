@@ -965,7 +965,7 @@ graph TB
 
     subgraph "중규모 &#40;10-50 화면&#41;"
         M1[Hybrid]
-        M2[Feature &#43; Layer]
+        M2[Feature #43; Layer]
         M3[확장 가능]
     end
 
