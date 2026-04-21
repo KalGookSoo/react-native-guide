@@ -222,7 +222,7 @@ sequenceDiagram
     participant M as Main Navigator
 
     U->>L: 로그인 정보 입력
-    L->>R: dispatch&#40;loginAsync&#41;
+    L->>R: dispatch#40;loginAsync#41;
 
     rect rgb(60, 179, 113, 0.2)
         Note over R: Auth State 변경
@@ -240,7 +240,7 @@ sequenceDiagram
     end
 
     U->>M: 로그아웃 버튼 클릭
-    M->>R: dispatch&#40;logoutAsync&#41;
+    M->>R: dispatch#40;logoutAsync#41;
     R->>R: isAuthenticated = false
     R->>N: state 변경 감지
     N->>L: Auth Navigator 렌더링
@@ -411,9 +411,9 @@ graph LR
 
     subgraph "Navigation Middleware"
         B --> C{Action Type?}
-        C -->|loginAsync.fulfilled| D[resetRoot&#40;'Main'&#41;]
-        C -->|logoutAsync| E[resetRoot&#40;'Auth'&#41;]
-        C -->|sessionExpired| F[resetRoot&#40;'Auth'&#41;]
+        C -->|loginAsync.fulfilled| D[resetRoot#40;'Main'#41;]
+        C -->|logoutAsync| E[resetRoot#40;'Auth'#41;]
+        C -->|sessionExpired| F[resetRoot#40;'Auth'#41;]
         C -->|Other| G[Pass Through]
     end
 
@@ -691,20 +691,20 @@ sequenceDiagram
 
     rect rgb(60, 179, 113, 0.2)
         Note over P,S: Pending 저장
-        P->>S: setPendingNavigation&#40;&#123; screen: 'Cart', action: ... &#125;&#41;
+        P->>S: setPendingNavigation#40;#123; screen: 'Cart', action: ... #125;#41;
     end
 
-    P->>L: navigate&#40;'Login'&#41;
+    P->>L: navigate#40;'Login'#41;
 
     U->>L: 로그인 정보 입력
-    L->>S: dispatch&#40;loginAsync&#41;
+    L->>S: dispatch#40;loginAsync#41;
     S->>S: loginAsync.fulfilled
 
     rect rgb(60, 179, 113, 0.2)
         Note over S: Middleware 처리
         S->>S: Pending action 실행
         S->>S: addToCart
-        S->>C: navigate&#40;'Cart'&#41;
+        S->>C: navigate#40;'Cart'#41;
         S->>S: clearPendingNavigation
     end
 
