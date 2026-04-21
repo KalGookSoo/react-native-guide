@@ -224,7 +224,7 @@ sequenceDiagram
     U->>L: 로그인 정보 입력
     L->>R: dispatch&#40;loginAsync&#41;
 
-    rect rgb&#40;60, 179, 113, 0.2&#41;
+    rect rgb(60, 179, 113, 0.2)
         Note over R: Auth State 변경
         R->>R: isAuthenticated = true
         R->>R: user, token 저장
@@ -233,7 +233,7 @@ sequenceDiagram
     R->>N: state 변경 감지
     N->>N: isAuthenticated 확인
 
-    rect rgb&#40;218, 165, 32, 0.2&#41;
+    rect rgb(60, 179, 113, 0.2)
         Note over N,M: 조건부 렌더링
         N->>M: Main Navigator 렌더링
         M->>M: 홈 화면 표시
@@ -689,7 +689,7 @@ sequenceDiagram
     P->>S: isAuthenticated 확인
     S-->>P: false
 
-    rect rgb&#40;195, 91, 91, 0.2&#41;
+    rect rgb(60, 179, 113, 0.2)
         Note over P,S: Pending 저장
         P->>S: setPendingNavigation&#40;&#123; screen: 'Cart', action: ... &#125;&#41;
     end
@@ -700,7 +700,7 @@ sequenceDiagram
     L->>S: dispatch&#40;loginAsync&#41;
     S->>S: loginAsync.fulfilled
 
-    rect rgb&#40;60, 179, 113, 0.2&#41;
+    rect rgb(60, 179, 113, 0.2)
         Note over S: Middleware 처리
         S->>S: Pending action 실행
         S->>S: addToCart
